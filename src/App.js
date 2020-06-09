@@ -1,5 +1,6 @@
 import React from "react";
-import PlayerCard from "./Cards/PlayerCard";
+import Player1 from "./Player/Player1";
+import Player2 from "./Player/Player2";
 
 const App = ({ player1, player2, player1Increment, player2Increment, resetScores, player1serving, winner, endOfGame }) => {
   return (
@@ -11,19 +12,12 @@ const App = ({ player1, player2, player1Increment, player2Increment, resetScores
 
       {/* scores */}
       <div className="row mb-4">
-        <PlayerCard
-          score={player1}
+        <Player1
           handleIncrement={player1Increment}
-          title="Player 1"
-          serving={player1serving}
-          winner={winner}
         />
-        <PlayerCard
-          score={player2}
+        <Player2
           handleIncrement={player2Increment}
-          title="Player 2"
-          serving={!player1serving}
-          winner={winner}
+
         />
       </div>
 
