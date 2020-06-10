@@ -1,6 +1,9 @@
 import { connect } from "react-redux";
 import PlayerCard from "./PlayerCard";
 
+import { incrementP2 } from "../../data/actions";
+
+
 const mapStateToProps = (state) => {
     return {
         score: state.player2,
@@ -10,4 +13,10 @@ const mapStateToProps = (state) => {
     }
 }
 
-export default connect(mapStateToProps)(PlayerCard);
+const mapDispatchToProps = (dispatch) => {
+    return {
+        handleIncrement: () => dispatch(incrementP2())
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(PlayerCard);

@@ -1,36 +1,24 @@
 import React from "react";
-import Player1 from "./Player/Player1";
-import Player2 from "./Player/Player2";
+import Player1 from "./components/Player/Player1";
+import Player2 from "./components/Player/Player2";
+import Winner from "./components/Winner";
+import Reset from "./components/Reset";
+import Header from "./components/Header/Header";
 
-const App = ({ player1, player2, player1Increment, player2Increment, resetScores, player1serving, winner, endOfGame }) => {
+const App = () => {
   return (
     <React.Fragment>
-      {/* header */}
-      <header className="jumbotron mt-4 mb-0">
-        <h1>PongPing</h1>
-      </header>
+      <Header />
 
       {/* scores */}
       <div className="row mb-4">
-        <Player1
-          handleIncrement={player1Increment}
-        />
-        <Player2
-          handleIncrement={player2Increment}
-
-        />
+        <Player1 />
+        <Player2 />
       </div>
-
-      { /* winner message */}
-      {winner === 0 ? null : <h2 className="alert alert-success">Player {winner} wins!</h2>}
-
+      <Winner />
       <hr />
 
-      { /* reset button */}
-      <button
-        className="btn btn-danger"
-        onClick={resetScores}
-      >Reset</button>
+      <Reset />
     </React.Fragment>
   )
 };

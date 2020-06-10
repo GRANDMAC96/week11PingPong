@@ -3,7 +3,8 @@ const initialState = {
     player2: 0,
     p1Serving: true,
     winner: 0,
-    disabled: false
+    disabled: false,
+    history: []
 };
 
 export default initialState;
