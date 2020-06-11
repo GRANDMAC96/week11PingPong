@@ -57,12 +57,21 @@ const upDateHistory = state => {
     }
 }
 
+const saveSettings = (state, { player1Name, player2Name, winningScore, alternate }) => ({
+    ...state,
+    player1Name: player1Name,
+    player2Name: player2Name,
+    winningScore: winningScore,
+    alternate: alternate
+});
+
 
 const reducer = (state, action) => {
     switch (action.type) {
         case "INCREMENTPLAYER1": return upDateHistory(score(serving(increaseP1(state))));
         case "INCREMENTPLAYER2": return upDateHistory(score(serving(increaseP2(state))));
         case "RESETSCORES": return reset(state);
+        case "SAVE_SETTINGS": return saveSettings(state, action);
         default: return state;
     }
 }

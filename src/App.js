@@ -8,8 +8,8 @@ import Player2 from "./components/Player/Player2";
 import Winner from "./components/Winner";
 import Reset from "./components/Reset";
 import Header from "./components/Header/Header";
-import History from "./components/History";
-import Start from "./components/Form/Form";
+import History from "./components/History/";
+import Settings from "./components/Settings/";
 
 const App = () => {
   return (
@@ -26,7 +26,7 @@ const App = () => {
           <Reset />
           <History />
         </Route>
-        <Route exact path="/start" component={Start} />
+        <Route exact path="/start" component={Settings} />
       </React.Fragment>
     </Router>
   )
