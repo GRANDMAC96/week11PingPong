@@ -4,7 +4,9 @@ const initialState = {
     p1Serving: true,
     winner: 0,
     disabled: false,
-    history: []
+    history: [],
+    winningScore: 0,
+    alternate: 0
 };
 
 export default initialState;
