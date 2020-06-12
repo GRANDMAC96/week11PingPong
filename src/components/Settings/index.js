@@ -1,7 +1,7 @@
 import { connect } from "react-redux";
 import Settings from "./Settings";
-
 import { saveSettings } from "../../data/actions";
+import history from "../../history";
 
 const mapStateToProps = state => {
     return {
@@ -16,7 +16,10 @@ const mapStateToProps = state => {
 // pass the value along to the action creator
 const mapDispatchToProps = dispatch => {
     return {
-        handleSave: settings => dispatch(saveSettings(settings)),
+        handleSave: settings => {
+            dispatch(saveSettings(settings));
+            history.push("/start");
+        },
     };
 };
 
