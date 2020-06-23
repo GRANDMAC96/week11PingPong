@@ -1,7 +1,9 @@
 import { connect } from "react-redux";
 import Settings from "./Settings";
-import { saveSettings } from "../../data/actions";
+import { postGame } from "../../data/api";
+// import { saveSettings } from "../../data/actions";
 import history from "../../history";
+
 
 const mapStateToProps = state => {
     return {
@@ -17,7 +19,7 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
     return {
         handleSave: settings => {
-            dispatch(saveSettings(settings));
+            dispatch(postGame(settings));
             history.push("/start");
         },
     };
