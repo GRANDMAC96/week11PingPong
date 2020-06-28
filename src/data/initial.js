@@ -9,6 +9,7 @@ const initialState = {
     history: [],
     winningScore: 21,
     alternate: 5,
+    loaded: false,
 };
 
 export default initialState;

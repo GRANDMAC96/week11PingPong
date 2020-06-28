@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 
-import { saveSettings } from "../../data/actions";
 
 // winningScore, alternate, player1Name, player2Name
 // I'm setting up a class to control my local state of my settings form.

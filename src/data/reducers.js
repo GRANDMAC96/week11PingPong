@@ -28,10 +28,10 @@ const serving = state => {
     }
 }
 const score = state => {
-    let { player1, player2, winner } = state
+    let { player1, player2, winner, winningScore } = state
     return {
         ...state,
-        winner: player1 >= 21 && player2 <= (player1 - 2) ? 1 : player2 >= 21 && player1 <= (player2 - 2) ? 2 : winner,
+        winner: player1 >= winningScore && player2 <= (player1 - 2) ? 1 : player2 >= winningScore && player1 <= (player2 - 2) ? 2 : winner,
     }
 }
 const upDateHistory = state => {
