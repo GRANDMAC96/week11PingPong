@@ -1,7 +1,7 @@
 import { saveSettings } from './actions';
 import axios from '../axios';
 
-export const postGame = ({ }) => {
+export const postGame = (player1Name, player2Name, winningScore, alternate) => {
     return (dispatch) => {
         axios.post("/", {
             player1Name: player1Name,

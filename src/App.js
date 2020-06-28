@@ -14,22 +14,22 @@ const App = () => {
   return (
     <React.Fragment>
       <Router history={history}>
-        <Loading>
-          <Route exact path={"/start"}>
-            <Header />
-            <div className="row mb-4">
-              <Player1 />
-              <Player2 />
-            </div>
-            <Winner />
-            <hr />
-            <Reset />
-            <History />
-          </Route>
-        </Loading>
-        <Loading>
-          <Route exact path="/" component={Settings} />
-        </Loading>
+        {/* <Loading> */}
+        <Route exact path={"/start"}>
+          <Header />
+          <div className="row mb-4">
+            <Player1 />
+            <Player2 />
+          </div>
+          <Winner />
+          <hr />
+          <Reset />
+          <History />
+        </Route>
+        {/* </Loading> */}
+        {/* <Loading> */}
+        <Route exact path="/" component={Settings} />
+        {/* </Loading> */}
       </Router>
     </React.Fragment>
   )
