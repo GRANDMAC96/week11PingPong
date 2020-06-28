@@ -1,4 +1,4 @@
-import initialState from "./initial"
+import initialState from "./initial";
 
 const increaseP1 = state => {
     return {
